@@ -11,7 +11,6 @@ _wp_complete() {
 		activate|deactivate|update|delete|get|is-active|path|status|uninstall|verify-checksums)
 			COMPREPLY=( $(cd $(wp plugin path); compgen -d -- "${cur}" ) )
 			;;
-		*)
 		esac
 	elif [[ "$command" = "theme" ]]
 	then
@@ -19,7 +18,6 @@ _wp_complete() {
 		activate|delete|disable|enable|is-active|is-installed|path|status|update)
 			COMPREPLY=( $(cd $(wp theme path); compgen -d -- "${cur}" ) )
 			;;
-		*)
 		esac
 	fi
 	if [[ "$COMPREPLY" = "" ]]
